@@ -376,7 +376,7 @@ CMD;
             // Activate latest release
             $commands = [
                 sprintf('cd %s', $root_dir),
-                sprintf('[ -h %s/latest ] && rm %s/latest', $root_dir, $root_dir),
+                sprintf('[ -h %s/latest ] && rm -rf %s/latest', $root_dir, $root_dir),
                 sprintf('ln -s %s %s/latest', $latest_release_dir, $root_dir),
             ];
         } elseif ($step->stage === Stage::DO_PURGE) {
